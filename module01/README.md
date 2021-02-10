@@ -164,6 +164,38 @@ Function def: `NumInList(list []int, num int) bool`
 
 Given a list of numbers, determine if a specific number is in that list.
 
+**Solution**
+
+1. We need to return something no matter what, this our base case:
+
+```
+return false
+```
+2. Next determine, what algorithm do we want to use for this:
+
+- *With a sorted list we could do search*
+- With an unsorted list, have to look at every single number in the list and see if that number is present.
+
+
+So we look throught the unsorted list and if we ever see the number, we return true at that point otherwise we return false:
+
+```
+func NumInList(list []int, num int) bool {
+	// This is a loop over all the numbers in the list
+	for _, val := range list {
+		// If val is = to num we return true
+		if val == num {
+			return true
+		}
+	}
+	// Otherwise we return Base case (false)
+	return false
+}
+```
+
+***Test using ```go_test -run=NumInList -v```***
+
+
 Ex:
 
 ```go
