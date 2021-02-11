@@ -196,16 +196,12 @@ func NumInList(list []int, num int) bool {
 ***Test using ```go_test -run=NumInList -v```***
 
 
-Ex:
+**Bonus:**
+
+- 
 
 ```go
-NumInList([]int{1,2,3,4,5}, 5) // true
-NumInList([]int{3,3,3,3,3}, 5) // false
-NumInList([]int{3,5,3,5,3}, 5) // true
-NumInList([]int{4,2,22,-10,8}, -10) // true
-
 // empty lists!
-NumInList(nil, 5) // false
 NumInList([]int{}, 5) // false
 ```
 
