@@ -196,9 +196,21 @@ func NumInList(list []int, num int) bool {
 ***Test using ```go_test -run=NumInList -v```***
 
 
-**Bonus:**
+**Bonus: Change code so that it also handles empty lists**
 
-- 
+**Solution**
+
+- We add if statement at the beginning of the func:
+
+```
+func NumInList(list []int, num int) bool {
+	// It implies that your array is empty.
+	if len(list) == 0 {
+		return false
+	}
+```
+
+- And we create test to check code runs correctly with desired outcome for empty lists
 
 ```go
 // empty lists!
@@ -225,6 +237,10 @@ Sum([]int{4,2,22,-10,8}) // 26
 Sum(nil) // 0
 Sum([]int{}) // 0
 ```
+
+**Solution**
+
+1. 
 
 ## 07 - Reverse a string [code]
 
